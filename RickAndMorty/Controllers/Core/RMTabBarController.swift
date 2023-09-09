@@ -12,25 +12,19 @@ final class RMTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
-        setUpTabs()
+        setUpTaps()
     }
     
-    private func setUpTabs() {
-        let characterVC = RMCharacterViewController()
-        let locationVC = RMLocationViewController()
-        let episodeVC = RMEpisodeViewController()
-        let settingVC = RMSettingViewController()
+    private func setUpTaps() {
+        let charactersVC = RMCharacterViewController()
+        let locationsVC = RMLocationViewController()
+        let episodesVC = RMEpisodeViewController()
+        let settingsVC = RMSettingViewController()
         
-        characterVC.navigationItem.largeTitleDisplayMode = .automatic
-        locationVC.navigationItem.largeTitleDisplayMode = .automatic
-        episodeVC.navigationItem.largeTitleDisplayMode = .automatic
-        settingVC.navigationItem.largeTitleDisplayMode = .automatic
-        
-        let nav1 = UINavigationController(rootViewController: characterVC)
-        let nav2 = UINavigationController(rootViewController: locationVC)
-        let nav3 = UINavigationController(rootViewController: episodeVC)
-        let nav4 = UINavigationController(rootViewController: settingVC)
+        let nav1 = UINavigationController(rootViewController: charactersVC)
+        let nav2 = UINavigationController(rootViewController: locationsVC)
+        let nav3 = UINavigationController(rootViewController: episodesVC)
+        let nav4 = UINavigationController(rootViewController: settingsVC)
         
         nav1.tabBarItem = UITabBarItem(title: "Characters", image: UIImage(systemName: "person"), tag: 1)
         nav2.tabBarItem = UITabBarItem(title: "Locations", image: UIImage(systemName: "globe"), tag: 2)
