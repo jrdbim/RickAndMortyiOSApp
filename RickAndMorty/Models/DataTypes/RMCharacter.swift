@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct RMCharacter: Codable {=
+struct RMCharacter: Codable {
     
 }

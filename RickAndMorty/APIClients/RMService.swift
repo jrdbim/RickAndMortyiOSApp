@@ -10,4 +10,18 @@ import Foundation
 /// Primary API service object to get Rick and Morty data
 final class RMService {
     
+    static let shared = RMService()
+    
+    private init() {
+        
+    }
+    
+    /// send api call
+    /// - Parameters:
+    ///   - request: Request instance
+    ///   - completion: callback with data or error
+    public func execute(_ request: RMRequest, completion: @escaping () -> Void) {
+        
+    }
+    
 }
